@@ -1,0 +1,23 @@
+{# src/Blogger/BlogBundle/Resources/views/Page/index.html.twig #}
+{% extends 'BloggerBlogBundle::layout.html.twig' %}
+
+{% block body_title %}Главная{% endblock %}
+
+{% block body %}
+    <div class="container " >
+        {% if is_granted('IS_AUTHENTICATED_FULLY') %}
+            <a class="btn btn-warning center-block but" href="{{ path('_security_logout') }}">Выход</a>
+        {% else %}
+            <a class="btn btn-success center-block but" href="{{ path('_security_login') }}">Вход</a>
+        {% endif %}
+
+
+        {% if is_granted('IS_AUTHENTICATED_FULLY') %}
+            <a class="btn btn-success center-block but" href="{{ path('blogger_blog_prepod') }}">Редактирование заявок</a>
+        {% else %}
+            <a class="btn btn-success center-block but1" href="{{ path('blogger_blog_bidd_new') }}">Подать заявку</a>
+        {% endif %}
+
+
+    </div>
+{% endblock %}

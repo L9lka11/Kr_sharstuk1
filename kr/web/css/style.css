@@ -1,0 +1,24 @@
+.but{
+    width:  200px;
+    margin-top: 150px;
+    background-color: #000;
+}
+
+.but:hover{
+    background-color: #1b6d85;
+}
+
+body{
+    background-color: blue;
+}
+.but1{
+    width:  150px;
+    margin-top: 100px;
+    background-color: #000;
+}
+.but1:hover{
+    background-color: #1b6d85;
+}
+.glav{
+    background-color: #000;
+}
